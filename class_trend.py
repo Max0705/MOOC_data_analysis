@@ -1,6 +1,7 @@
 import db_operation as dbo
 import matplotlib.pyplot as plt
 
+plt.rcParams['figure.figsize'] = (12.0, 4.0)
 for i in range(4,14):
     x = dbo.select_where('CAST(date AS date) ', 'class_trend', "ClassId='"+str(i)+"'")
     y = dbo.select_where('CAST(NewPick AS signed)', 'class_trend', "ClassId='"+str(i)+"'")
@@ -20,7 +21,7 @@ for i in range(4,14):
 
     plt.title("NewPick Student Number and Total Student Number"+" of Class"+str(i))
 
-    plt.savefig("class_trend" + str(i))
+    plt.savefig("class_trend_result/class_trend" + str(i))
     plt.show()
     print(type(x))
 
