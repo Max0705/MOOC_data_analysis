@@ -68,9 +68,16 @@ else:
     file.write("不存在\n")
 
 plt.plot(x, y1, 'g-')
+plt.xlabel('method')
+plt.ylabel('submits')
+plt.title('method-submits')
 plt.savefig("lesson_detail_result/submits.png")
 plt.show()
+
 plt.plot(x, y2, 'g-')
+plt.xlabel('method')
+plt.ylabel('score')
+plt.title('method-score')
 plt.savefig("lesson_detail_result/score.png")
 plt.show()
 
